@@ -93,9 +93,10 @@ def search(f, box, n, m, batch, resfile,
     fmax = max(abs(points[:, -1]))
     points[:, -1] = points[:, -1]/fmax
 
+    #print(type(d))
     # volume of d-dimensional ball (r = 1)
     if mpz(d) % 2 == 0:
-        v1 = np.pi**(d/2)/fac(d/2)
+        v1 = np.pi**(d/2)/fac(int(d/2))
     else:
         v1 = 2*(4*np.pi)**((d-1)/2)*fac((d-1)/2)/fac(d)
 

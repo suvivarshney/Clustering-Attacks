@@ -95,7 +95,7 @@ def search(f, box, n, m, batch, resfile,
 
     # volume of d-dimensional ball (r = 1)
     if mpz(d) % 2 == 0:
-        v1 = np.pi**(d/2)/fac(d/2)
+        v1 = np.pi**(d/2)/fac(int(d/2))
     else:
         v1 = 2*(4*np.pi)**((d-1)/2)*fac((d-1)/2)/fac(d)
 
